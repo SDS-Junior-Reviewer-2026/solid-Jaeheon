@@ -1,21 +1,10 @@
 package greeter;
 
-public class Greeter {
-    String formality;
+public abstract class Greeter {
+    public static final int NORMAL = 0;
+    public static final int FORMAL = 1;
+    public static final int CASUAL = 2;
+    public static final int INTIMATE = 3;
 
-    public String greet() {
-        if (this.formality == "formal") {
-            return "Good evening, sir.";
-        } else if (this.formality == "casual") {
-            return "Sup bro?";
-        } else if (this.formality == "intimate") {
-            return "Hello Darling!";
-        } else {
-            return "Hello.";
-        }
-    }
-
-    public void setFormality(String formality) {
-        this.formality = formality;
-    }
+    public abstract String greet();
 }
