@@ -2,12 +2,12 @@ package weather;
 
 public class WeatherTracker {
     String currentConditions;
-    Phone phone;
-    Email email;
+    Notifier phone;
+    Notifier email;
 
     public WeatherTracker() {
-        phone = new Phone();
-        email = new Email();
+        phone = NotifierFactory.getNotifier("phone");
+        email = NotifierFactory.getNotifier("email");
     }
 
     public void setCurrentConditions(String weatherDescription) {

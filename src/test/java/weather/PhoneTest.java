@@ -7,7 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PhoneTest {
     @Test
     public void testGeneratesAlertString() {
-        Phone phone = new Phone();
+        Notifier phone = NotifierFactory.getNotifier("phone");
+        assert phone != null;
         assertEquals("It is rainy", phone.generateWeatherAlert("rainy"));
     }
 }
